@@ -86,7 +86,9 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AssistenciaController.cs" />
+    <Compile Include="Controllers\OcorrenciaController.cs" />
     <Compile Include="DAL\AssistenciaDAL.cs" />
+    <Compile Include="DAL\OcorrenciaDAL.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

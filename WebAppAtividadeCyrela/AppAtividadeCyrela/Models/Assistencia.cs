@@ -18,7 +18,7 @@ namespace AppAtividadeCyrela.Models
 
         public Assistencia() { }
 
-        public Assistencia(DateTime Inicio, DateTime Fim, string Tipo, string Assunto, int Empreendimento, int Bloco, int Unidade, int Atividade)
+        public Assistencia(DateTime Inicio, DateTime Fim, string Tipo, string Assunto, int Empreendimento, int Bloco, int Unidade)
         {
             AtividadeIni = Inicio;
             AtividadeFim = Fim;
@@ -26,9 +26,7 @@ namespace AppAtividadeCyrela.Models
             this.Assunto = Assunto;
             IdEmpreendimento = Empreendimento;
             IdBloco = Bloco;
-            IdUnidade = Unidade;
-            IdAssistencia = Atividade;
-            
+            IdUnidade = Unidade;            
         }
 
     }

@@ -13,7 +13,7 @@ namespace AppAtividadeCyrela.Models
         public int IdBloco { get; set; }
         public int IdUnidade { get; set; }
         public int Bandeira { get; set; }
-        public string Descricao { get; set; }
+        public string Descricao { get; set; }        
 
         public Ocorrencia() { }
 

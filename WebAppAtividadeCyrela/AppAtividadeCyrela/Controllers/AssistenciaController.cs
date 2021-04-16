@@ -30,5 +30,51 @@ namespace AppAtividadeCyrela.Controllers
                 return NotFound();
             }
         }
+
+        public IHttpActionResult Post([FromBody] Assistencia Assistencia) 
+        {
+            try
+            {
+                AssistenciaDAL dal = new AssistenciaDAL();
+                dal.Inserir(Assistencia);
+
+                string location = Url.Link("DefaultApi", new { controller = "assistencia", id = Assistencia.IdAssistencia });
+
+                return Created(new Uri(location), Assistencia);
+
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+        public IHttpActionResult Delete(int id) 
+        {
+            try
+            {
+                AssistenciaDAL dal = new AssistenciaDAL();
+                dal.Excluir(id);
+                return Ok();
+            }
+            catch (Exception) 
+            {
+                return BadRequest();
+            }
+        }
+
+        public IHttpActionResult Put([FromBody] Assistencia assistencia) 
+        {
+            try
+            {
+                AssistenciaDAL dal = new AssistenciaDAL();
+                dal.Alterar(assistencia);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
     }
 }

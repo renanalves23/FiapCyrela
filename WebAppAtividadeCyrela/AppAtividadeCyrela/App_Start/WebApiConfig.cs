@@ -12,7 +12,7 @@ namespace AppAtividadeCyrela
             // Serviços e configuração da API da Web
 
             // Rotas da API da Web
-            config.MapHttpAttributeRoutes();
+            config.MapHttpAttributeRoutes();            
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
